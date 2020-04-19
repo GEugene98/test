@@ -1,0 +1,207 @@
+[04/10/2020 17:36:05]  Npgsql.PostgresException (0x80004005): 3D000: database "WorkScheduler_DEV" does not exist
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1003
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1032
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 425
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\ConnectorPool.cs:line 246
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnection.cs:line 300
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken) in C:\projects\npgsql-entityframeworkcore-postgresql\src\EFCore.PG\Storage\Internal\NpgsqlExecutionStrategy.cs:line 72
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+   at Microsoft.AspNetCore.Identity.UserManager`1.FindByNameAsync(String userName)
+   at WorkScheduler.Controllers.AccountController.Login(LoginViewModel model) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Controllers/AccountController.cs:line 107
+
+[04/13/2020 01:39:04]  System.DllNotFoundException: Unable to load shared library '/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll' or one of its dependencies. In order to help diagnose loading problems, consider setting the DYLD_PRINT_LIBRARIES environment variable: dlopen(/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll, 1): no suitable image found.  Did find:
+	/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll: unknown file type, first eight bytes: 0x4D 0x5A 0x90 0x00 0x03 0x00 0x00 0x00
+	/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll: unknown file type, first eight bytes: 0x4D 0x5A 0x90 0x00 0x03 0x00 0x00 0x00
+   at System.Runtime.Loader.AssemblyLoadContext.InternalLoadUnmanagedDllFromPath(String unmanagedDllPath)
+   at System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDllFromPath(String unmanagedDllPath)
+   at WorkSheduler.CustomAssemblyLoadContext.LoadUnmanagedDll(String unmanagedDllName) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 153
+   at WorkSheduler.CustomAssemblyLoadContext.LoadUnmanagedLibrary(String absolutePath) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 149
+   at WorkSheduler.Startup.ConfigureServices(IServiceCollection services) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 79
+
+[04/13/2020 01:39:04]  System.InvalidOperationException: To use UseSpaStaticFiles, you must first register an ISpaStaticFileProvider in the service provider, typically by calling services.AddSpaStaticFiles.
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.ShouldServeStaticFiles(IApplicationBuilder app, Boolean allowFallbackOnServingWebRootFiles, IFileProvider& fileProviderOrDefault)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFilesInternal(IApplicationBuilder app, StaticFileOptions staticFileOptions, Boolean allowFallbackOnServingWebRootFiles)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFiles(IApplicationBuilder applicationBuilder, StaticFileOptions options)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFiles(IApplicationBuilder applicationBuilder)
+   at WorkSheduler.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 114
+
+[04/13/2020 01:49:06]  Npgsql.PostgresException (0x80004005): 3D000: database "WorkScheduler_DEV" does not exist
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1003
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 1032
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\NpgsqlConnector.cs:line 425
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken) in C:\projects\npgsql\src\Npgsql\ConnectorPool.cs:line 246
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext() in C:\projects\npgsql\src\Npgsql\NpgsqlConnection.cs:line 300
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken) in C:\projects\npgsql-entityframeworkcore-postgresql\src\EFCore.PG\Storage\Internal\NpgsqlExecutionStrategy.cs:line 72
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+   at Microsoft.AspNetCore.Identity.UserManager`1.FindByNameAsync(String userName)
+   at WorkScheduler.Controllers.AccountController.Login(LoginViewModel model) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Controllers/AccountController.cs:line 107
+
+[04/13/2020 02:21:31]  System.ArgumentNullException: String reference not set to an instance of a String.
+Parameter name: s
+   at System.Text.Encoding.GetBytes(String s)
+   at WorkScheduler.Controllers.ReportController.ForTimeline(Int32 startDay, Int32 startMonth, Int32 startYear, Int32 endDay, Int32 endMonth, Int32 endYear) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Controllers/ReportController.cs:line 102
+
+[04/13/2020 02:39:12]  System.NotSupportedException: No data is available for encoding 1251. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at System.Text.Encoding.GetEncoding(Int32 codepage)
+   at WorkScheduler.Controllers.ReportController.ForTimeline(Int32 startDay, Int32 startMonth, Int32 startYear, Int32 endDay, Int32 endMonth, Int32 endYear) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Controllers/ReportController.cs:line 102
+
+[04/13/2020 02:40:07]  System.NotSupportedException: No data is available for encoding 1251. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at System.Text.Encoding.GetEncoding(Int32 codepage)
+   at WorkScheduler.Controllers.ReportController.ForTimeline(Int32 startDay, Int32 startMonth, Int32 startYear, Int32 endDay, Int32 endMonth, Int32 endYear) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Controllers/ReportController.cs:line 102
+
+[04/13/2020 02:40:11]  System.NotSupportedException: No data is available for encoding 1251. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.
+   at System.Text.Encoding.GetEncoding(Int32 codepage)
+   at WorkScheduler.Controllers.ReportController.ForTimeline(Int32 startDay, Int32 startMonth, Int32 startYear, Int32 endDay, Int32 endMonth, Int32 endYear) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Controllers/ReportController.cs:line 102
+
+[04/16/2020 22:26:19]  System.DllNotFoundException: Unable to load shared library '/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll' or one of its dependencies. In order to help diagnose loading problems, consider setting the DYLD_PRINT_LIBRARIES environment variable: dlopen(/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll, 1): no suitable image found.  Did find:
+	/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll: unknown file type, first eight bytes: 0x4D 0x5A 0x90 0x00 0x03 0x00 0x00 0x00
+	/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll: unknown file type, first eight bytes: 0x4D 0x5A 0x90 0x00 0x03 0x00 0x00 0x00
+   at System.Runtime.Loader.AssemblyLoadContext.InternalLoadUnmanagedDllFromPath(String unmanagedDllPath)
+   at System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDllFromPath(String unmanagedDllPath)
+   at WorkSheduler.CustomAssemblyLoadContext.LoadUnmanagedDll(String unmanagedDllName) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 153
+   at WorkSheduler.CustomAssemblyLoadContext.LoadUnmanagedLibrary(String absolutePath) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 149
+   at WorkSheduler.Startup.ConfigureServices(IServiceCollection services) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 79
+
+[04/16/2020 22:26:20]  System.InvalidOperationException: To use UseSpaStaticFiles, you must first register an ISpaStaticFileProvider in the service provider, typically by calling services.AddSpaStaticFiles.
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.ShouldServeStaticFiles(IApplicationBuilder app, Boolean allowFallbackOnServingWebRootFiles, IFileProvider& fileProviderOrDefault)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFilesInternal(IApplicationBuilder app, StaticFileOptions staticFileOptions, Boolean allowFallbackOnServingWebRootFiles)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFiles(IApplicationBuilder applicationBuilder, StaticFileOptions options)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFiles(IApplicationBuilder applicationBuilder)
+   at WorkSheduler.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 114
+
+[04/16/2020 23:28:40]  System.DllNotFoundException: Unable to load shared library '/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll' or one of its dependencies. In order to help diagnose loading problems, consider setting the DYLD_PRINT_LIBRARIES environment variable: dlopen(/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll, 1): no suitable image found.  Did find:
+	/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll: unknown file type, first eight bytes: 0x4D 0x5A 0x90 0x00 0x03 0x00 0x00 0x00
+	/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll: unknown file type, first eight bytes: 0x4D 0x5A 0x90 0x00 0x03 0x00 0x00 0x00
+   at System.Runtime.Loader.AssemblyLoadContext.InternalLoadUnmanagedDllFromPath(String unmanagedDllPath)
+   at System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDllFromPath(String unmanagedDllPath)
+   at WorkSheduler.CustomAssemblyLoadContext.LoadUnmanagedDll(String unmanagedDllName) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 153
+   at WorkSheduler.CustomAssemblyLoadContext.LoadUnmanagedLibrary(String absolutePath) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 149
+   at WorkSheduler.Startup.ConfigureServices(IServiceCollection services) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 79
+
+[04/16/2020 23:28:45]  System.InvalidOperationException: To use UseSpaStaticFiles, you must first register an ISpaStaticFileProvider in the service provider, typically by calling services.AddSpaStaticFiles.
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.ShouldServeStaticFiles(IApplicationBuilder app, Boolean allowFallbackOnServingWebRootFiles, IFileProvider& fileProviderOrDefault)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFilesInternal(IApplicationBuilder app, StaticFileOptions staticFileOptions, Boolean allowFallbackOnServingWebRootFiles)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFiles(IApplicationBuilder applicationBuilder, StaticFileOptions options)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFiles(IApplicationBuilder applicationBuilder)
+   at WorkSheduler.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 114
+
+[04/16/2020 23:31:26]  System.DllNotFoundException: Unable to load shared library '/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll' or one of its dependencies. In order to help diagnose loading problems, consider setting the DYLD_PRINT_LIBRARIES environment variable: dlopen(/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll, 1): no suitable image found.  Did find:
+	/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll: unknown file type, first eight bytes: 0x4D 0x5A 0x90 0x00 0x03 0x00 0x00 0x00
+	/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll: unknown file type, first eight bytes: 0x4D 0x5A 0x90 0x00 0x03 0x00 0x00 0x00
+   at System.Runtime.Loader.AssemblyLoadContext.InternalLoadUnmanagedDllFromPath(String unmanagedDllPath)
+   at System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDllFromPath(String unmanagedDllPath)
+   at WorkSheduler.CustomAssemblyLoadContext.LoadUnmanagedDll(String unmanagedDllName) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 153
+   at WorkSheduler.CustomAssemblyLoadContext.LoadUnmanagedLibrary(String absolutePath) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 149
+   at WorkSheduler.Startup.ConfigureServices(IServiceCollection services) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 79
+
+[04/16/2020 23:31:27]  System.InvalidOperationException: To use UseSpaStaticFiles, you must first register an ISpaStaticFileProvider in the service provider, typically by calling services.AddSpaStaticFiles.
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.ShouldServeStaticFiles(IApplicationBuilder app, Boolean allowFallbackOnServingWebRootFiles, IFileProvider& fileProviderOrDefault)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFilesInternal(IApplicationBuilder app, StaticFileOptions staticFileOptions, Boolean allowFallbackOnServingWebRootFiles)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFiles(IApplicationBuilder applicationBuilder, StaticFileOptions options)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFiles(IApplicationBuilder applicationBuilder)
+   at WorkSheduler.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 114
+
+[04/18/2020 13:14:34]  System.DllNotFoundException: Unable to load shared library '/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll' or one of its dependencies. In order to help diagnose loading problems, consider setting the DYLD_PRINT_LIBRARIES environment variable: dlopen(/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll, 1): no suitable image found.  Did find:
+	/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll: unknown file type, first eight bytes: 0x4D 0x5A 0x90 0x00 0x03 0x00 0x00 0x00
+	/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll: unknown file type, first eight bytes: 0x4D 0x5A 0x90 0x00 0x03 0x00 0x00 0x00
+   at System.Runtime.Loader.AssemblyLoadContext.InternalLoadUnmanagedDllFromPath(String unmanagedDllPath)
+   at System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDllFromPath(String unmanagedDllPath)
+   at WorkSheduler.CustomAssemblyLoadContext.LoadUnmanagedDll(String unmanagedDllName) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 153
+   at WorkSheduler.CustomAssemblyLoadContext.LoadUnmanagedLibrary(String absolutePath) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 149
+   at WorkSheduler.Startup.ConfigureServices(IServiceCollection services) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 79
+
+[04/18/2020 13:14:35]  System.InvalidOperationException: To use UseSpaStaticFiles, you must first register an ISpaStaticFileProvider in the service provider, typically by calling services.AddSpaStaticFiles.
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.ShouldServeStaticFiles(IApplicationBuilder app, Boolean allowFallbackOnServingWebRootFiles, IFileProvider& fileProviderOrDefault)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFilesInternal(IApplicationBuilder app, StaticFileOptions staticFileOptions, Boolean allowFallbackOnServingWebRootFiles)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFiles(IApplicationBuilder applicationBuilder, StaticFileOptions options)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFiles(IApplicationBuilder applicationBuilder)
+   at WorkSheduler.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 114
+
+[04/18/2020 13:16:14]  System.DllNotFoundException: Unable to load shared library '/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll' or one of its dependencies. In order to help diagnose loading problems, consider setting the DYLD_PRINT_LIBRARIES environment variable: dlopen(/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll, 1): no suitable image found.  Did find:
+	/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll: unknown file type, first eight bytes: 0x4D 0x5A 0x90 0x00 0x03 0x00 0x00 0x00
+	/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll: unknown file type, first eight bytes: 0x4D 0x5A 0x90 0x00 0x03 0x00 0x00 0x00
+   at System.Runtime.Loader.AssemblyLoadContext.InternalLoadUnmanagedDllFromPath(String unmanagedDllPath)
+   at System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDllFromPath(String unmanagedDllPath)
+   at WorkSheduler.CustomAssemblyLoadContext.LoadUnmanagedDll(String unmanagedDllName) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 153
+   at WorkSheduler.CustomAssemblyLoadContext.LoadUnmanagedLibrary(String absolutePath) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 149
+   at WorkSheduler.Startup.ConfigureServices(IServiceCollection services) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 79
+
+[04/18/2020 13:16:15]  System.InvalidOperationException: To use UseSpaStaticFiles, you must first register an ISpaStaticFileProvider in the service provider, typically by calling services.AddSpaStaticFiles.
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.ShouldServeStaticFiles(IApplicationBuilder app, Boolean allowFallbackOnServingWebRootFiles, IFileProvider& fileProviderOrDefault)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFilesInternal(IApplicationBuilder app, StaticFileOptions staticFileOptions, Boolean allowFallbackOnServingWebRootFiles)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFiles(IApplicationBuilder applicationBuilder, StaticFileOptions options)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFiles(IApplicationBuilder applicationBuilder)
+   at WorkSheduler.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 114
+
+[04/18/2020 13:17:55]  System.DllNotFoundException: Unable to load shared library '/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll' or one of its dependencies. In order to help diagnose loading problems, consider setting the DYLD_PRINT_LIBRARIES environment variable: dlopen(/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll, 1): no suitable image found.  Did find:
+	/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll: unknown file type, first eight bytes: 0x4D 0x5A 0x90 0x00 0x03 0x00 0x00 0x00
+	/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll: unknown file type, first eight bytes: 0x4D 0x5A 0x90 0x00 0x03 0x00 0x00 0x00
+   at System.Runtime.Loader.AssemblyLoadContext.InternalLoadUnmanagedDllFromPath(String unmanagedDllPath)
+   at System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDllFromPath(String unmanagedDllPath)
+   at WorkSheduler.CustomAssemblyLoadContext.LoadUnmanagedDll(String unmanagedDllName) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 153
+   at WorkSheduler.CustomAssemblyLoadContext.LoadUnmanagedLibrary(String absolutePath) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 149
+   at WorkSheduler.Startup.ConfigureServices(IServiceCollection services) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 79
+
+[04/18/2020 13:17:56]  System.InvalidOperationException: To use UseSpaStaticFiles, you must first register an ISpaStaticFileProvider in the service provider, typically by calling services.AddSpaStaticFiles.
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.ShouldServeStaticFiles(IApplicationBuilder app, Boolean allowFallbackOnServingWebRootFiles, IFileProvider& fileProviderOrDefault)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFilesInternal(IApplicationBuilder app, StaticFileOptions staticFileOptions, Boolean allowFallbackOnServingWebRootFiles)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFiles(IApplicationBuilder applicationBuilder, StaticFileOptions options)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFiles(IApplicationBuilder applicationBuilder)
+   at WorkSheduler.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 114
+
+[04/18/2020 13:18:35]  System.DllNotFoundException: Unable to load shared library '/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll' or one of its dependencies. In order to help diagnose loading problems, consider setting the DYLD_PRINT_LIBRARIES environment variable: dlopen(/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll, 1): no suitable image found.  Did find:
+	/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll: unknown file type, first eight bytes: 0x4D 0x5A 0x90 0x00 0x03 0x00 0x00 0x00
+	/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll: unknown file type, first eight bytes: 0x4D 0x5A 0x90 0x00 0x03 0x00 0x00 0x00
+   at System.Runtime.Loader.AssemblyLoadContext.InternalLoadUnmanagedDllFromPath(String unmanagedDllPath)
+   at System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDllFromPath(String unmanagedDllPath)
+   at WorkSheduler.CustomAssemblyLoadContext.LoadUnmanagedDll(String unmanagedDllName) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 153
+   at WorkSheduler.CustomAssemblyLoadContext.LoadUnmanagedLibrary(String absolutePath) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 149
+   at WorkSheduler.Startup.ConfigureServices(IServiceCollection services) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 79
+
+[04/18/2020 13:18:36]  System.InvalidOperationException: To use UseSpaStaticFiles, you must first register an ISpaStaticFileProvider in the service provider, typically by calling services.AddSpaStaticFiles.
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.ShouldServeStaticFiles(IApplicationBuilder app, Boolean allowFallbackOnServingWebRootFiles, IFileProvider& fileProviderOrDefault)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFilesInternal(IApplicationBuilder app, StaticFileOptions staticFileOptions, Boolean allowFallbackOnServingWebRootFiles)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFiles(IApplicationBuilder applicationBuilder, StaticFileOptions options)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFiles(IApplicationBuilder applicationBuilder)
+   at WorkSheduler.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 114
+
+[04/18/2020 13:19:17]  System.DllNotFoundException: Unable to load shared library '/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll' or one of its dependencies. In order to help diagnose loading problems, consider setting the DYLD_PRINT_LIBRARIES environment variable: dlopen(/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll, 1): no suitable image found.  Did find:
+	/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll: unknown file type, first eight bytes: 0x4D 0x5A 0x90 0x00 0x03 0x00 0x00 0x00
+	/Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/libwkhtmltox.dll: unknown file type, first eight bytes: 0x4D 0x5A 0x90 0x00 0x03 0x00 0x00 0x00
+   at System.Runtime.Loader.AssemblyLoadContext.InternalLoadUnmanagedDllFromPath(String unmanagedDllPath)
+   at System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDllFromPath(String unmanagedDllPath)
+   at WorkSheduler.CustomAssemblyLoadContext.LoadUnmanagedDll(String unmanagedDllName) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 153
+   at WorkSheduler.CustomAssemblyLoadContext.LoadUnmanagedLibrary(String absolutePath) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 149
+   at WorkSheduler.Startup.ConfigureServices(IServiceCollection services) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 79
+
+[04/18/2020 13:19:17]  System.InvalidOperationException: To use UseSpaStaticFiles, you must first register an ISpaStaticFileProvider in the service provider, typically by calling services.AddSpaStaticFiles.
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.ShouldServeStaticFiles(IApplicationBuilder app, Boolean allowFallbackOnServingWebRootFiles, IFileProvider& fileProviderOrDefault)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFilesInternal(IApplicationBuilder app, StaticFileOptions staticFileOptions, Boolean allowFallbackOnServingWebRootFiles)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFiles(IApplicationBuilder applicationBuilder, StaticFileOptions options)
+   at Microsoft.Extensions.DependencyInjection.SpaStaticFilesExtensions.UseSpaStaticFiles(IApplicationBuilder applicationBuilder)
+   at WorkSheduler.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env) in /Users/geugene/GitHub/SchoolInformationSystem/WorkScheduler/Startup.cs:line 114
+
